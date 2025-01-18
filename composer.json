@@ -1,0 +1,16 @@
+{
+  "name": "vengine-libs/migrations",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Vengine\\Libraries\\Migrations\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "vengine-libs/repository": "*",
+    "vengine-libs/console": "*",
+    "vengine-libs/dbal": "*"
+  },
+  "minimum-stability": "stable"
+}
