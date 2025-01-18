@@ -31,10 +31,8 @@ class MigrationManager
         $this->repository = $repository;
         $this->db = $db;
 
-        $ds = DIRECTORY_SEPARATOR;
-
         if (!empty($_SERVER['install.dir'])) {
-            $installDir = $_SERVER['install.dir'] . "{$ds}Migrations{$ds}install{$ds}";
+            $installDir = $_SERVER['install.dir'];
 
             if (is_dir($installDir)) {
                 $this->collectMigrationFiles($installDir, $this->repository->hasTable());
