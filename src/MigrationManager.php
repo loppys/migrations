@@ -33,7 +33,7 @@ class MigrationManager
 
         $ds = DIRECTORY_SEPARATOR;
 
-        if ($_SERVER['install.dir']) {
+        if (!empty($_SERVER['install.dir'])) {
             $installDir = $_SERVER['install.dir'] . "{$ds}Migrations{$ds}install{$ds}";
 
             if (is_dir($installDir)) {
